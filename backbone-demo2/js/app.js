@@ -1,6 +1,6 @@
 // create backbone collection
 var Locations = Backbone.Collection.extend({
-    url: 'http://localhost:3000/locations' // or your local version
+    url: 'http://localhost:3000/locations'
 });
 
 // create backbone collection
