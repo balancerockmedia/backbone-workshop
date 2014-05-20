@@ -16,7 +16,8 @@ define(
     
             render: function() {
                 this.$el.html(this.template());
-        
+                
+                // list widget
                 var listWidget = new ListWidget({
                     collection: Repository.getLocations()
                 });
