@@ -1,11 +1,11 @@
 // create backbone collection
 var Locations = Backbone.Collection.extend({
-    url: 'http://localhost:3000/locations'
+    url: 'http://166.78.112.120:3000/locations'
 });
 
 // create backbone collection
 var Currencies = Backbone.Collection.extend({
-    url: 'http://localhost:3000/currencies'
+    url: 'http://166.78.112.120:3000/currencies'
 });
 
 // page view
@@ -44,7 +44,7 @@ var PageView = Backbone.View.extend({
     }
 });
 
-// currency view
+// list view
 var ListView = Backbone.View.extend({
     tagName: 'ul',
     
@@ -58,7 +58,7 @@ var ListView = Backbone.View.extend({
     render: function() {
         var models = this.collection.models;
         
-        // render each location model using a template
+        // render each model using a template
         for (var i = 0; i < models.length; i++) {
             var template = Handlebars.compile($('#list-template').html());
             
