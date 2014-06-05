@@ -6,13 +6,13 @@ define(
         'use strict';
         
         var _locations = new Backbone.Collection();
-        _locations.url = 'http://localhost:3000/locations';
+        _locations.url = 'http://166.78.112.120:3000/locations';
         
         var _currencies = new Backbone.Collection();
-        _currencies.url = 'http://localhost:3000/currencies';
+        _currencies.url = 'http://166.78.112.120:3000/currencies';
         
         var _markets = new Backbone.Collection();
-        _markets.url = 'http://localhost:3000/markets';
+        _markets.url = 'http://166.78.112.120:3000/markets';
         
         var _repository = {
             getLocations: function () {

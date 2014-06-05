@@ -15,7 +15,7 @@ define(
             template: Handlebars.compile(MarketPageTemplate),
             
             events: {
-                'submit form': 'createMarket'
+                'submit form': 'saveMarket'
             },
             
             initialize: function() {
@@ -37,14 +37,28 @@ define(
                 return this;
             },
             
-            createMarket: function(e) {
+            saveMarket: function(e) {
                 e.preventDefault();
                 
-                this.markets.create({
-                    name: this.$('input[name="name"]').val(),
-                    location_id: this.$('input[name="location_id"]').val(),
-                    currency_id: this.$('input[name="currency_id"]').val()
-                });
+                var action = $('input[name="action"]').val();
+                
+                if (action === 'create') {
+                    this.markets.create({
+                        name: this.$('input[name="name"]').val(),
+                        location_id: this.$('input[name="location_id"]').val(),
+                        currency_id: this.$('input[name="currency_id"]').val()
+                    });
+                }
+                
+                if (action === 'update') {
+                    var market = this.markets.get(this.$('input[name="id"]').val());
+                    
+                    market.set('name', this.$('input[name="name"]').val());
+                    market.set('location_id', this.$('input[name="location_id"]').val());
+                    market.set('currency_id', this.$('input[name="currency_id"]').val());
+                    
+                    market.save();
+                }
             }
         });
     }
