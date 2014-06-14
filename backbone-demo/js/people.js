@@ -21,9 +21,9 @@ var PageView = Backbone.View.extend({
     tagName: 'ul',
     
     render: function() {
+        var template = Handlebars.compile($('#people-template').html());
+        
         for (var i = 0; i < this.collection.models.length; i++) {
-            var template = Handlebars.compile($('#people-template').html());
-            
             this.$el.append(template(this.collection.models[i].attributes));
         }
         

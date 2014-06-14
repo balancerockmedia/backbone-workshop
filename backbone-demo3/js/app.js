@@ -58,10 +58,10 @@ var ListView = Backbone.View.extend({
     render: function() {
         var models = this.collection.models;
         
+        var template = Handlebars.compile($('#list-template').html());
+        
         // render each model using a template
         for (var i = 0; i < models.length; i++) {
-            var template = Handlebars.compile($('#list-template').html());
-            
             this.$el.append(template(models[i].attributes));
         }
         
