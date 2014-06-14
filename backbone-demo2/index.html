@@ -9,7 +9,9 @@
 <div id="container"></div>
 
 <script id="person-template" type="text/x-handlebars-template">
-    <p>Hello {{ name }}</p>
+    <p><label>Name: </label><input type="text" class="js-inputName"></p>
+    
+    <p>Hello <span class="js-displayName">{{ name }}</p>
 </script>
     
 <script type="text/javascript" src="js/libs/jquery-2.1.1.min.js"></script>
