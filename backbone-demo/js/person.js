@@ -2,8 +2,7 @@
 var Person = Backbone.Model.extend();
 
 var person = new Person({
-    name: 'John',
-    age: '30'
+    name: 'John'
 });
 
 // create backbone view
