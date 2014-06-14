@@ -8,8 +8,27 @@
     
 <div id="container"></div>
 
-<script type="text/javascript" src="js/config.js"></script>
-<script type="text/javascript" data-main="js/main" src="js/require-2.1.2.min.js"></script>
+<script id="location-page-template" type="text/x-handlebars-template">
+    <h2>Locations</h2>
+    
+    <p><a href="#currencies">Go to Currencies</a></p>
+</script>
+
+<script id="currency-page-template" type="text/x-handlebars-template">
+    <h2>Currencies</h2>
+    
+    <p><a href="#locations">Go to Locations</a></p>
+</script>
+
+<script id="list-template" type="text/x-handlebars-template">
+    <li>{{ name }}</li>
+</script>
+    
+<script type="text/javascript" src="js/libs/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/libs/underscore-min.js"></script>
+<script type="text/javascript" src="js/libs/backbone-min.js"></script>
+<script type="text/javascript" src="js/libs/handlebars-v1.3.0.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 
 </body>
 </html>
