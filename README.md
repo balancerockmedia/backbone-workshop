@@ -1,2 +1,2 @@
-Girl Develop It
-==============
+Backbone Workshop
+=================
